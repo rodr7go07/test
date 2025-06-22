@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\ListAutos;
 use Illuminate\Support\Facades\Route;
 
 use function Termwind\render;
@@ -36,4 +37,6 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('pages.dashboard');
     })->name('dashboard');
+
+    Route::get('admin/autos', ListAutos::class)->name('list-autos');
 });
