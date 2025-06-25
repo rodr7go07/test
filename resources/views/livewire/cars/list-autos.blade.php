@@ -9,7 +9,7 @@
 
     @props(['id' => null, 'maxWidth' => null])
 
-    @include('livewire.cars.edit-car-modal')
+    @include('livewire.cars.modals.edit-car-modal')
 
 
 

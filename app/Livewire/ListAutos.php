@@ -28,7 +28,7 @@ class ListAutos extends Component
     {
         $cars = Car::with('brand')->paginate(10);
 
-        return view('livewire.list-autos', [
+        return view('livewire.cars.list-autos', [
             'cars' => $cars,
             'columns' => $this->columns,
         ]);
