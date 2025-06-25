@@ -37,6 +37,8 @@
 
     <!--- Toast -->
     <script src="/plugins/toast/toast.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+
 
     <script>
         window.addEventListener('toast', event => {

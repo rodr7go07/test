@@ -11,7 +11,11 @@ class ListAutos extends Component
 
     use WithPagination;
 
+    public bool $showEditCarModal = false;
+    public $car;
+
     public array $columns = [
+        'id' => '#',
         'name' => 'Nombre',
         'brand.name' => 'Marca',
         'model' => 'Modelo',
@@ -28,5 +32,18 @@ class ListAutos extends Component
             'cars' => $cars,
             'columns' => $this->columns,
         ]);
+    }
+
+
+    public function editCarModal(Car $car)
+    {
+        $this->car = $car;
+        $this->showEditCarModal = true;
+    }
+
+    public function closeModal()
+    {
+        $this->showEditCarModal = false;
+        $this->car = null;
     }
 }
